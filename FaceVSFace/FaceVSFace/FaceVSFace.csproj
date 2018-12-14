@@ -1,0 +1,732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9BEC0D1B-E044-474E-BB52-2B44C80B8E66}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FaceVSFace</RootNamespace>
+    <AssemblyName>FaceVSFace</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cammera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cammera.Designer.cs">
+      <DependentUpon>Cammera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commons.cs" />
+    <Compile Include="frmSoSanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSoSanh.Designer.cs">
+      <DependentUpon>frmSoSanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cammera.resx">
+      <DependentUpon>Cammera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSoSanh.resx">
+      <DependentUpon>frmSoSanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\148752.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnswersheetMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnwermarkMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnwersheetMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AttachMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackupMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BarcodescannerthickMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BarcodescannerthinMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Board.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CameraMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CancelMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Candidate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carpentry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CategoryMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Certificate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckAnswer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckedDocument.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chemistry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorChooser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CompactDisc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConsoleMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Curriculum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\danger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DatabasecheckedMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DatabaselockMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DatabaseMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DatabaserefreshMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DatabasesettingMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DatabasethickMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DatabasewarningMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Decree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DecreeLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeletecircleMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeletemediumMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeletethinMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoccumentMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documentCabinet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocumentMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocxMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditmediumMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditthickMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditthinMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Envelope.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exam1Mono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExamMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExcelMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExportexcelMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExportMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FileStorage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FolderMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graduate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GraduateFemale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GraduateMale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GraphicDesign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GraphicTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graphs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Handshake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeartthinMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeckthinMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomethicksvgMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomethinMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Idea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImportantMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImportexcelMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImportMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KeyboardQuestion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KeyDoor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KeyMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keyword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Learning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lecture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeftarrowMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Locked1Mono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LockedMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lockedthick1Mono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LockedthickMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luggage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MailBoxMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MailBoxWhiteMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mailed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManSupport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarkedMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarkMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Message1Mono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MessagecheckedMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MessagecheckedthickMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MessageMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Networking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OfficeMaterial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaperexamMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Papers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PDF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pens.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Permision.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Photograph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pinned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlusthinMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PostOffice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrinterMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QaMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionanswerMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionAswers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Questions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionsMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RestoredataMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RestoreMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoomSort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoomSorted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scaner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScanimageMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScanMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scanner1Mono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScannerMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scanning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\School.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SchoolMaterial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchDoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchDocument.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchpaperMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearhList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SentFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SentMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SettingMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignedDocMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignedMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StackMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stationery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StudentFemale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StudentMale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Study.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SubjectMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SwapTest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TagMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TaskList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TaskListChecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TestMarked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextLines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThrashthickMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThrashthinfocusMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThrashthinMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TXT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnlockedMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USBDrive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vacations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Verification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VideoPlayer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vocabulary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarningDocument.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarningMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarningthickMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wikipedia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WorddocMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WordMono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebCamCapture\WebCamCapture.csproj">
+      <Project>{95e3d6f5-3b3b-454b-ad31-ca89699b680c}</Project>
+      <Name>WebCamCapture</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
